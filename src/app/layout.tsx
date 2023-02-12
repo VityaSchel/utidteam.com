@@ -1,4 +1,5 @@
 import './globals.css'
+import '@fontsource/public-sans'
 
 export default function RootLayout({
   children,

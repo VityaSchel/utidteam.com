@@ -1,0 +1,11 @@
+{
+  "home": {
+    "line1": "UTID no longer exists, but all released projects and the website will be kept published",
+    "line2": "In the previous version of this website, there was a projects gallery and contacts links",
+    "line3": "Now you can find projects list and contacts of the leading developer by visiting links below:",
+    "links": {
+      "projects": "All projects by Viktor Shchelochkov",
+      "contacts": "Contacts"
+    }
+  }
+}

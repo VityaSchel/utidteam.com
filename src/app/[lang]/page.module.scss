@@ -1,0 +1,51 @@
+.main {
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 24px;
+
+  .info {
+    width: 80%;
+    padding-right: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 28px;
+
+    a {
+      color: #ddd;
+      transition: color 125ms ease-in-out;
+      font-weight: 300;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        color: #fff;
+
+        &::after {
+          margin-left: 20px;
+        }
+      }
+
+      &::after {
+        content: '→';
+        margin-left: 10px;
+        transition: margin-left 125ms ease-in-out;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
