@@ -7,7 +7,7 @@ import Head from 'next/head'
 
 const rubik = Rubik({ subsets: ['cyrillic', 'latin'], weight: ['400', '300'] })
 
-export default async function Home({ params }: { params: { lang: string } }) {
+export default async function Home({ params }: { params: { lang: string } }): Promise<React.ReactNode> {
   const { home } = await import(`./dictionaries/${params.lang}.json`)
 
   return (
