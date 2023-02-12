@@ -13,9 +13,7 @@ export default async function Home({ params }: { params: { lang: string } }) {
   return (
     <main className={cx(styles.main, rubik.className)}>
       <div className={styles.info}>
-        {/* <Head>
-          <meta name="description" content={home.description} />
-        </Head> */}
+        <span style={{ display: 'none' }}>https://github.com/VityaSchel/utidteam.com</span>
         <LanguageSwitcher activeLang={params.lang} />
         <p>{home.line1}</p>
         <p>{home.line2}</p>
