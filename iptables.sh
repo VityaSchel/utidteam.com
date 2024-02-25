@@ -26,14 +26,20 @@ iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -p tcp --dport 9050 -j ACCEPT
 iptables -A INPUT -p tcp --dport 27017 -j ACCEPT
 
-# 5. Разрешаем подключение по outline (VPN)
+# 5. Разрешаем frp и minecraft
+iptables -A INPUT -p tcp --dport 25565 -j ACCEPT
+iptables -A INPUT -p tcp --dport 25566 -j ACCEPT
+# iptables -A INPUT -p tcp --dport 24454 -j ACCEPT
+iptables -A INPUT -p udp --dport 24454 -j ACCEPT
+
+# 6. Разрешаем подключение по outline (VPN)
 iptables -A INPUT -p tcp --dport 32364 -j ACCEPT
 
-# 6. Блокируем ICMP
+# 7. Блокируем ICMP
 iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
 iptables -A INPUT -i eth1 -p icmp --icmp-type echo-request -j DROP
 
-# 7. Остальное дропаем
+# 8. Остальное дропаем
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
