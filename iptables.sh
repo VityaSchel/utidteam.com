@@ -29,7 +29,7 @@ iptables -A INPUT -p tcp --dport 27017 -j ACCEPT
 # 5. Разрешаем frp и minecraft
 iptables -A INPUT -p tcp --dport 25565 -j ACCEPT
 iptables -A INPUT -p tcp --dport 25566 -j ACCEPT
-# iptables -A INPUT -p tcp --dport 24454 -j ACCEPT
+iptables -A INPUT -p tcp --dport 24454 -j ACCEPT
 iptables -A INPUT -p udp --dport 24454 -j ACCEPT
 
 # 6. Разрешаем подключение по outline (VPN)
