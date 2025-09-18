@@ -6,3 +6,6 @@ Simple website with info about UTID
 
 [Visit website](https://utidteam.com/en)
 
+## License
+
+[MIT](./LICENSE)
